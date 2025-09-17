@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Kanban Board</title>
+  </head>
+  <body>
+    <div class="kanban-container">
+      <h1>Dynamic Kanban Board</h1>
+
+      <!-- Task Creation Form -->
+      <div class="task-form">
+        <input type="text" id="task-title" placeholder="Task Title" required>
+        <textarea id="task-description" placeholder="Task Description" rows="3"></textarea>
+        <button id="add-task-btn">Add Task</button>
+      </div>
+
+      <!-- Kanban Board -->
+      <div class="kanban-board">
+        <div class="column" data-status="todo">
+          <h2>To Do</h2>
+          <div class="task-list" id="todo-list"></div>
+        </div>
+        <div class="column" data-status="in-progress">
+          <h2>In Progress</h2>
+          <div class="task-list" id="in-progress-list"></div>
+        </div>
+        <div class="column" data-status="done">
+          <h2>Done</h2>
+          <div class="task-list" id="done-list"></div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
